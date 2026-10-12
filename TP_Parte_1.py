@@ -44,7 +44,7 @@ while jugar and puntaje_inicial > 0:
                     print(f"FELICIDADES! TRIPLE 7. Ganaste {puntos_ganados} puntos!")
                     print("")
 
-                elif primer_caracter == segundo_caracter and primer_caracter == tercer_caracter and primer_caracter in ['A', 'B', 'C', 'D']:
+                elif primer_caracter == segundo_caracter and primer_caracter == tercer_caracter and (primer_caracter == "A" or primer_caracter == "B" or primer_caracter == "C" or primer_caracter == "D"):
                     puntos_ganados = apuesta * 5
                     puntaje_inicial += puntos_ganados
                     print(f"Felicidades! TRES IGUALES. Ganaste {puntos_ganados} puntos!.")
@@ -60,6 +60,9 @@ while jugar and puntaje_inicial > 0:
                     puntaje_inicial -= apuesta
                     print(f"TODOS DISTINTOS! Suerte la proxima, perdiste {apuesta} puntos.")
                     print("")
+
+            elif puntaje_inicial == 0:
+                print("Perdiste todos los puntos! JUEGO TERMINADO!!")
 
             else:
                 print("PUNTAJE INSUFICINTE. Ingresar nueva apuesta o salir del juego")
