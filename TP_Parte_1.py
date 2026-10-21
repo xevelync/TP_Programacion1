@@ -25,9 +25,9 @@ while jugar and puntaje_inicial > 0:
                 print("EJECUTAR TIRADA")
                 print("")
 
-                primer_caracter = random.choice(caracteres_posibles)
-                segundo_caracter = random.choice(caracteres_posibles)
-                tercer_caracter = random.choice(caracteres_posibles)
+                primer_caracter = caracteres_posibles[random.randint(0, len(caracteres_posibles) - 1)]
+                segundo_caracter = caracteres_posibles[random.randint(0, len(caracteres_posibles) - 1)]
+                tercer_caracter = caracteres_posibles[random.randint(0, len(caracteres_posibles) - 1)]
 
                 print(f"Resultados: {primer_caracter} | {segundo_caracter} | {tercer_caracter}")
                 print("")
